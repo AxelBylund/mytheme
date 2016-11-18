@@ -1,10 +1,15 @@
+
+
 <?php get_header(); ?>
+<?php the_post();?>
+
+<?php $image = get_post_meta($post->ID, 'background_image', true); ?>
     <div class="parallax">
         <div id="group1" class="parallax__group">
-            <div class="parallax__layer parallax__layer--base">
+            <div class="parallax__layer parallax__layer--base" >
                 <div class="title">Base Layer</div>
             </div>
-            <div class="parallax__layer parallax__layer--back"> </div>
+            <div class="parallax__layer parallax__layer--back" style="background-image: url(<?php echo wp_get_attachment_url($image); ?>);"> </div>
         </div>
         <div id="group2" class="parallax__group">
             <div class="parallax__layer parallax__layer--fore">

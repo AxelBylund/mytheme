@@ -11,9 +11,9 @@ Version: 1.0
 * Adds a meta box to the post editing screen
 */
 
-function add_front_page_meta_box()
-{                                      // --- Parameters: ---
-    add_meta_box( 'demo-meta-box', // ID attribute of metabox
+function add_image_page_meta_box()
+{   // --- Parameters: ---
+    add_meta_box( 'add_image_page_meta_box', // ID attribute of metabox
                   '<h2>Upload media</h2>',       // Title of metabox visible to user
                   'meta_box_background_image', // Function that prints box in wp-admin
                   'page',              // Show box for posts, pages, custom, etc.
@@ -33,26 +33,30 @@ function meta_box_background_image($page) {
             font-weight: bold;
         }
     </style>
-        <script>
-            (function ($) {
-                $(document).ready(function () {
-                    $('#upload_image_button').click(function () {
-                        tb_show('', 'media-upload.php?page_id=<?php  echo $page->ID; ?>&type=image&amp;TB_iframe=true');
-                        return false;
-                    });
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+                $('#select_image_button').click(function () {
+                    wp.media.editor.send.attachment = function(attachment, data) {
+                        $('#HEJ').val(data.id);
+                    }
+                    
+                    wp.media.editor.open('#select_image_button');
                 });
-            })(jQuery);
-        </script>
-        <div class="media-upload">
-            <table>
-                <tr valign="top">
-                    <td>
-                        <input id="upload_image_button" type="button" value="Upload Media"> </td>
-                </tr>
-            </table>
-        </div>
-        <?php
+            });
+        })(jQuery);
+    </script>
+    <div class="media-select">
+        <table>
+            <tr valign="top">
+                <td>
+                    <input id="HEJ" name="background" value="<?php echo get_post_meta($page->ID, 'background_image', true); ?>">
+                    <input id="select_image_button" name="background_image" type="button" value="Select background image"> </td>
+            </tr>
+        </table>
+    </div>
+    <?php
 }
 
-add_action( 'add_meta_boxes', 'add_front_page_meta_box' );
+add_action( 'add_meta_boxes', 'add_image_page_meta_box' );
 ?>
