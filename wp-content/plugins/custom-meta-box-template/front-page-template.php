@@ -50,7 +50,7 @@ function meta_box_background_image($page) {
         <table>
             <tr valign="top">
                 <td>
-                    <input id="HEJ" name="background" value="<?php echo get_post_meta($page->ID, 'background_image', true); ?>">
+                    <input id="HEJ" name="background" disabled value="<?php echo get_post_meta($page->ID, 'background_image', true); ?>">
                     <input id="select_image_button" name="background_image" type="button" value="Select background image"> </td>
             </tr>
         </table>
