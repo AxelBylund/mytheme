@@ -17,7 +17,7 @@
             </div>
             <div class="parallax__layer parallax__layer--base"> </div>
         </div>
-        <div class="front-page-bottom-container">
+        <div class="front-page-footer">
             <div class="left">
                 <h1>Left</h1> </div>
             <div class="right">

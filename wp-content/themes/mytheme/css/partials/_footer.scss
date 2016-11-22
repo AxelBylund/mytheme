@@ -1,0 +1,25 @@
+/* FRONT-PAGE FOOTER */
+
+.front-page-footer {
+    height: 50vh;
+    width: 100%;
+    background-color: aquamarine;
+    z-index: 10;
+    text-align: center;
+    margin-top: -1px;
+}
+
+.front-page-footer .left {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.front-page-footer .right {
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+
+
+/* END OF FRONT-PAGE FOOTER */

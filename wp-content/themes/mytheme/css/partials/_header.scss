@@ -1,0 +1,8 @@
+@media (max-width: $breakpoint-tablet) {
+    .navbar {
+        z-index: 3;
+    }
+    .navbar .navbar-fixed-top .navbar-fixed-top {
+        margin-bottom: 0;
+    }
+}
