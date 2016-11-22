@@ -14,8 +14,19 @@ Version: 1.0
 function add_image_page_meta_box()
 {   // --- Parameters: ---
     add_meta_box( 'add_image_page_meta_box', // ID attribute of metabox
-                  '<h2>Upload media</h2>',       // Title of metabox visible to user
+                  '<h2>Select first background picture.</h2>',       // Title of metabox visible to user
                   'meta_box_background_image', // Function that prints box in wp-admin
+                  'page',              // Show box for posts, pages, custom, etc.
+                  'side',            // Where on the page to show the box
+                  'high'           // Priority of box in display order
+                );            
+}
+
+function add_second_image_page_meta_box()
+{   // --- Parameters: ---
+    add_meta_box( 'add_second_image_page_meta_box', // ID attribute of metabox
+                  '<h2>Upload media</h2>',       // Title of metabox visible to user
+                  'meta_box_background_image_second', // Function that prints box in wp-admin
                   'page',              // Show box for posts, pages, custom, etc.
                   'side',            // Where on the page to show the box
                   'high'           // Priority of box in display order
@@ -38,7 +49,7 @@ function meta_box_background_image($page) {
             $(document).ready(function () {
                 $('#select_image_button').click(function () {
                     wp.media.editor.send.attachment = function(attachment, data) {
-                        $('#HEJ').val(data.id);
+                        $('#background-image').val(data.id);
                     }
                     
                     wp.media.editor.open('#select_image_button');
@@ -50,13 +61,15 @@ function meta_box_background_image($page) {
         <table>
             <tr valign="top">
                 <td>
-                    <input id="HEJ" name="background" disabled value="<?php echo get_post_meta($page->ID, 'background_image', true); ?>">
+                    <input id="background-image" name="background" disabled value="<?php echo get_post_meta($page->ID, 'background_image', true); ?>">
                     <input id="select_image_button" name="background_image" type="button" value="Select background image"> </td>
             </tr>
         </table>
     </div>
     <?php
 }
+
+
 
 add_action( 'add_meta_boxes', 'add_image_page_meta_box' );
 ?>
