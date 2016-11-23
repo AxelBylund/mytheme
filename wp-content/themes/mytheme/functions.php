@@ -28,8 +28,18 @@ if ( function_exists('register_sidebar') )
 
 function saveBackgroundImage($post) {
     $bg = isset($_POST['background']) ? $_POST['background']: null;
-    
-    update_post_meta($post, 'background_image', $bg);
+    if($bg) {
+        update_post_metadata($post, 'background_image', $bg);
+    }
 }
 
 add_action('save_post', 'saveBackgroundImage');
+
+function saveSecondBackgroundImage($post) {
+    $bg = isset($_POST['background']) ? $_POST['background']: null;
+    if($bg) {
+        update_post_metadata($post, 'second_background_image', $bg);
+    }
+}
+
+add_action('save_post', 'saveSecondBackgroundImage');
