@@ -1,3 +1,26 @@
+.navbar .navbar-inner {
+    background-color: transparent;
+    background: transparent;
+    border-color: transparent;
+}
+
+.navbar .navbar-inner li a {
+    color: $black;
+}
+.navbar .navbar-inner li a:hover {
+    color: $turquoise;
+    text-shadow: none;
+}
+
+.navbar-inverse .brand {
+    color: $black;
+}
+
+.navbar-inverse .brand:hover {
+    color: $turquoise;
+    text-shadow: none;
+}
+
 @media (max-width: $breakpoint-tablet) {
     .navbar {
         z-index: 3;

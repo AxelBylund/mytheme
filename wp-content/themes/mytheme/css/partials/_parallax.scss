@@ -30,7 +30,7 @@
 .parallax__layer--back {
     -webkit-transform: translateZ(1px) scale(1);
     transform: translateZ(1px) scale(1);
-    background-color: #AEAEAE;
+    background-color: $grey;
     background-size: cover;
     z-index: 3;
 }
@@ -64,7 +64,7 @@
 #group2 .parallax__layer--base {
     -webkit-transform: translateZ(1px) scale(1);
     transform: translateZ(1px) scale(1);
-    background-color: #EEEEEE;
+    background-color: $light-grey;
     background-size: cover;
 }
 
@@ -73,7 +73,7 @@
 
 .parallax::-webkit-scrollbar {
     width: 0.4em;
-    background-color: #181818;
+    background-color: $dark-grey;
 }
 
 .parallax::-webkit-scrollbar-track {
@@ -81,8 +81,8 @@
 }
 
 .parallax::-webkit-scrollbar-thumb {
-    background-color: #ffffff;
-    outline: 1px solid #000000;
+    background-color: $white;
+    outline: 1px solid $white;
 }
 
 
@@ -98,7 +98,7 @@
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    color: white;
+    color: $turquoise;
     font-size: 6em;
     font-weight: bold;
     font-family: 'Indie flower';

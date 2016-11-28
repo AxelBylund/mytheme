@@ -76,9 +76,9 @@ function meta_box_background_image($page) {
                     <label class="metabox-label" for="background-image-position">
                         <h2>Position</h2></label>
                     <select name="background-image-position" id="background-image-position">
-                        <option value="Left" <?php selected( $selected, 'Left' ); ?>>Left</option>
+                        <option value="Top" <?php selected( $selected, 'Top' ); ?>>Top</option>
                         <option value="Center" <?php selected( $selected, 'Center' ); ?>>Center</option>
-                        <option value="Right" <?php selected( $selected, 'Right' ); ?>>Right</option>
+                        <option value="Bottom" <?php selected( $selected, 'Bottom' ); ?>>Bottom</option>
                     </select>
                 </td>
             </tr>
@@ -126,9 +126,9 @@ function meta_box_background_image_second($page) {
                         <label class="metabox-label" for="second-background-image-position">
                             <h2>Position</h2></label>
                         <select name="second-background-image-position" id="second-background-image-position">
-                            <option value="Left" <?php selected( $secondselected, 'Left' ); ?>>Left</option>
+                            <option value="Top" <?php selected( $secondselected, 'Top' ); ?>>Top</option>
                             <option value="Center" <?php selected( $secondselected, 'Center' ); ?>>Center</option>
-                            <option value="Right" <?php selected( $secondselected, 'Right' ); ?>>Right</option>
+                            <option value="Bottom" <?php selected( $secondselected, 'Bottom' ); ?>>Bottom</option>
                         </select>
                     </td>
                 </tr>

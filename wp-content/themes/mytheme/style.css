@@ -34,7 +34,7 @@ body {
 .front-page-footer {
   height: 60vh;
   width: 100%;
-  background-color: aquamarine;
+  background-color: #4ce8d5;
   z-index: 10;
   text-align: center;
   margin-top: -1px; }
@@ -50,6 +50,25 @@ body {
   height: 100%; }
 
 /* END OF FRONT-PAGE FOOTER */
+.navbar .navbar-inner {
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent; }
+
+.navbar .navbar-inner li a {
+  color: #000000; }
+
+.navbar .navbar-inner li a:hover {
+  color: #4ce8d5;
+  text-shadow: none; }
+
+.navbar-inverse .brand {
+  color: #000000; }
+
+.navbar-inverse .brand:hover {
+  color: #4ce8d5;
+  text-shadow: none; }
+
 @media (max-width: 768px) {
   .navbar {
     z-index: 3; }
@@ -125,7 +144,7 @@ body {
 
 .parallax::-webkit-scrollbar-thumb {
   background-color: #ffffff;
-  outline: 1px solid #000000; }
+  outline: 1px solid #ffffff; }
 
 /* END OF SCROLLBAR */
 /* centre the content in the parallax layers */
@@ -136,7 +155,7 @@ body {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  color: white;
+  color: #4ce8d5;
   font-size: 6em;
   font-weight: bold;
   font-family: 'Indie flower'; }
