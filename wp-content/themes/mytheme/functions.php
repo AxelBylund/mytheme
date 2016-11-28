@@ -4,9 +4,10 @@ function wpbootstrap_scripts_with_jquery()
 	// Register the script like this for a theme:
 	wp_register_script( 'custom-script', get_template_directory_uri() . '/bootstrap/js/bootstrap.js', array( 'jquery' ) );
     
-    wp_register_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ) );
+    wp_register_script( 'custom-script', get_template_directory_uri() . '/js/main.js', array( 'jquery' ) );
 	// For either a plugin or a theme, you can then enqueue the script:
-	wp_enqueue_script( 'main' );
+	
+    wp_enqueue_script('custom-script');
 }
 add_action( 'wp_enqueue_scripts', 'wpbootstrap_scripts_with_jquery' );
 
@@ -43,6 +44,15 @@ function saveTextOverlayTitle($post) {
 
 add_action('save_post', 'saveTextOverlayTitle');
 
+function saveBackgroundImagePosition($post) {
+    $select = isset($_POST['background-image-position']) ? $_POST['background-image-position']: null;
+    if($select) {
+        update_post_meta($post, 'background-image-position', $select);
+    }
+}
+
+add_action('save_post', 'saveBackgroundImagePosition');
+
 function saveSecondBackgroundImage($post) {
     $bg = isset($_POST['second-background']) ? $_POST['second-background']: null;
     if($bg) {
@@ -60,3 +70,12 @@ function saveSecondTextOverlayTitle($post) {
 }
 
 add_action('save_post', 'saveSecondTextOverlayTitle');
+
+function saveSecondBackgroundImagePosition($post) {
+    $select = isset($_POST['second-background-image-position']) ? $_POST['second-background-image-position']: null;
+    if($select) {
+        update_post_meta($post, 'second-background-image-position', $select);
+    }
+}
+
+add_action('save_post', 'saveSecondBackgroundImagePosition');

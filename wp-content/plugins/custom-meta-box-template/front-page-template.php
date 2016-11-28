@@ -14,22 +14,22 @@ Version: 1.0
 function add_image_page_meta_box()
 {   // --- Parameters: ---
     add_meta_box( 'add_image_page_meta_box', // ID attribute of metabox
-                  '<h1>First background.</h1>',       // Title of metabox visible to user
-                  'meta_box_background_image', // Function that prints box in wp-admin
-                  'page',              // Show box for posts, pages, custom, etc.
-                  'side',            // Where on the page to show the box
-                  'high'           // Priority of box in display order
+                    '<h1>First background.</h1>',       // Title of metabox visible to user
+                    'meta_box_background_image', // Function that prints box in wp-admin
+                    'page',              // Show box for posts, pages, custom, etc.
+                    'side',            // Where on the page to show the box
+                    'high'           // Priority of box in display order
                 );            
 }
 
 function add_second_image_page_meta_box()
 {   // --- Parameters: ---
     add_meta_box( 'add_second_image_page_meta_box', // ID attribute of metabox
-                  '<h1>Second background.</h1>',       // Title of metabox visible to user
-                  'meta_box_background_image_second', // Function that prints box in wp-admin
-                  'page',              // Show box for posts, pages, custom, etc.
-                  'side',            // Where on the page to show the box
-                  'high'           // Priority of box in display order
+                    '<h1>Second background.</h1>',       // Title of metabox visible to user
+                    'meta_box_background_image_second', // Function that prints box in wp-admin
+                    'page',              // Show box for posts, pages, custom, etc.
+                    'side',            // Where on the page to show the box
+                    'high'           // Priority of box in display order
                 );            
 }
 
@@ -38,6 +38,8 @@ function add_second_image_page_meta_box()
  */
 function meta_box_background_image($page) {
     wp_nonce_field(basename(__FILE__), "meta-box-nonce");
+    $values = get_post_custom( $post->ID );
+    $selected = isset( $values['background-image-position'] ) ? esc_attr( $values['background-image-position'][0] ) : ”;
     ?>
     <script>
         (function ($) {
@@ -65,8 +67,20 @@ function meta_box_background_image($page) {
             </tr>
             <tr>
                 <td id="first-overlay-title">
-                    <h2>Overlay title</h2>
-                    <input id="overlay-title-input" name="overlay_text" type="text" placeholder="Write title here." value="<?php echo get_post_meta($page->ID, 'overlay_text', true); ?>"> </td>
+                    <label class="metabox-label" for="overlay-title-input">
+                        <h2>Overlay title</h2></label>
+                    <input id="overlay-title-input" name="overlay_text" class="metabox-input" type="text" placeholder="Write title here." value="<?php echo get_post_meta($page->ID, 'overlay_text', true); ?>"> </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="metabox-label" for="background-image-position">
+                        <h2>Position</h2></label>
+                    <select name="background-image-position" id="background-image-position">
+                        <option value="Left" <?php selected( $selected, 'Left' ); ?>>Left</option>
+                        <option value="Center" <?php selected( $selected, 'Center' ); ?>>Center</option>
+                        <option value="Right" <?php selected( $selected, 'Right' ); ?>>Right</option>
+                    </select>
+                </td>
             </tr>
         </table>
     </div>
@@ -75,6 +89,8 @@ function meta_box_background_image($page) {
 
 function meta_box_background_image_second($page) {
     wp_nonce_field(basename(__FILE__), "meta-box-nonce");
+    $values = get_post_custom( $post->ID );
+    $secondselected = isset( $values['second-background-image-position'] ) ? esc_attr( $values['second-background-image-position'][0] ) : ”;
     ?>
         <script>
             (function ($) {
@@ -101,8 +117,20 @@ function meta_box_background_image_second($page) {
                 </tr>
                 <tr>
                     <td id="overlay-title">
-                        <h2>Overlay title</h2>
-                        <input id="second-overlay-title-input" name="second_overlay_text" type="text" placeholder="Write title here." value="<?php echo get_post_meta($page->ID, 'second_overlay_text', true); ?>"> </td>
+                        <label class="metabox-label" for="second-overlay-title-input">
+                            <h2>Overlay title</h2> </label>
+                        <input id="second-overlay-title-input" class="metabox-input" name="second_overlay_text" type="text" placeholder="Write title here." value="<?php echo get_post_meta($page->ID, 'second_overlay_text', true); ?>"> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="metabox-label" for="second-background-image-position">
+                            <h2>Position</h2></label>
+                        <select name="second-background-image-position" id="second-background-image-position">
+                            <option value="Left" <?php selected( $secondselected, 'Left' ); ?>>Left</option>
+                            <option value="Center" <?php selected( $secondselected, 'Center' ); ?>>Center</option>
+                            <option value="Right" <?php selected( $secondselected, 'Right' ); ?>>Right</option>
+                        </select>
+                    </td>
                 </tr>
             </table>
         </div>

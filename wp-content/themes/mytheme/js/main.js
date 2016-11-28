@@ -1,19 +1,12 @@
-$(function () {
-    $(document).ready(function () {
-        $('#select_image_button').click(function () {
-            wp.media.editor.open('#select_image_button');
-        });
-    });
+$(document).ready(function () {
+    console.log('main.js loaded');
 });
-
-/* disable mm btn for / scroll circle
-$(function () {
-    $('html').mousedown(function (e) {
-        if (e.button == 1) return false
+$(document).ready(function () {
+    $('#select_image_button').click(function () {
+        wp.media.editor.send.attachment = function (attachment, data) {
+            $('#background-image').val(data.id);
+            $('#background-image-thumbnail').attr('src', data.sizes.thumbnail.url);
+        }
+        wp.media.editor.open('#select_image_button');
     });
-});
-*/
-
-$(document).ready(function() {
-   console.log('hejasdasdasd');
 });

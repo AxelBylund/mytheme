@@ -19,7 +19,8 @@ License URI: http://creativecommons.org/licenses/by-sa/3.0/
 @import url("bootstrap/css/bootstrap-responsive.css");
 body,
 html {
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 1920px; }
 
 body {
   font: 100% / 1.5 Arial; }
@@ -31,7 +32,7 @@ body {
 /* END OF GLOBAL */
 /* FRONT-PAGE FOOTER */
 .front-page-footer {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   background-color: aquamarine;
   z-index: 10;
@@ -81,8 +82,8 @@ body {
   bottom: 0; }
 
 .parallax__layer--back {
-  -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(-300px) scale(2);
+  -webkit-transform: translateZ(1px) scale(1);
+  transform: translateZ(1px) scale(1);
   background-color: #AEAEAE;
   background-size: cover;
   z-index: 3; }
@@ -93,8 +94,8 @@ body {
   z-index: 1; }
 
 .parallax__layer--base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  -webkit-transform: translateZ(90ox) scale(0.7);
+  transform: translateZ(90px) scale(0.7);
   z-index: 4; }
 
 #group1 {
@@ -140,9 +141,6 @@ body {
   font-weight: bold;
   font-family: 'Indie flower'; }
 
-@media (max-width: 768px) {
-  .parallax {
-    overflow-y: hidden; } }
 /* END OF PARALLAX */
 /* FONTS */
 /* END OF FONTS */

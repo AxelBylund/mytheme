@@ -1,8 +1,11 @@
-#first-overlay-title {
+.metabox-input {
     width: 180px;
 }
 
-#first-overlay-title h2 {
+
+/* Override WP-admin css */
+
+#poststuff h2 {
     margin-top: 20px;
     margin-bottom: 0;
     padding: 0;
