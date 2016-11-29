@@ -81,8 +81,8 @@
 }
 
 .parallax::-webkit-scrollbar-thumb {
-    background-color: $white;
-    outline: 1px solid $white;
+    background-color: $turquoise;
+    outline: 1px solid $dark-grey;
 }
 
 
@@ -90,6 +90,17 @@
 
 
 /* centre the content in the parallax layers */
+
+.title-box {
+    height: 20%;
+    width: 102vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+}
 
 .title {
     text-align: center;
@@ -102,9 +113,14 @@
     font-size: 6em;
     font-weight: bold;
     font-family: 'Indie flower';
+    width: 75%;
+    opacity: 1;
 }
 
-@media (max-width: $breakpoint-tablet) {
+@media (max-width: $breakpoint-bootstrap) {
+    .parallax::-webkit-scrollbar-thumb {
+        background-color: $red;
+    }
 }
 
 

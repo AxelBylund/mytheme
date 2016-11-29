@@ -16,7 +16,7 @@
         <?php wp_head(); ?>
 </head>
 
-<body <?php body_class();?>>
+<body id="body" <?php body_class();?>>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">

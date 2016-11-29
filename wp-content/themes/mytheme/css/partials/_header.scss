@@ -1,31 +1,21 @@
-.navbar .navbar-inner {
-    background-color: transparent;
-    background: transparent;
-    border-color: transparent;
-}
-
-.navbar .navbar-inner li a {
-    color: $black;
-}
-.navbar .navbar-inner li a:hover {
-    color: $turquoise;
-    text-shadow: none;
-}
-
-.navbar-inverse .brand {
-    color: $black;
-}
-
-.navbar-inverse .brand:hover {
-    color: $turquoise;
-    text-shadow: none;
-}
-
-@media (max-width: $breakpoint-tablet) {
+@media (max-width: $breakpoint-bootstrap) {
+    #body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
     .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
         z-index: 3;
     }
-    .navbar .navbar-fixed-top .navbar-fixed-top {
+    #body .navbar-fixed-top {
         margin-bottom: 0;
+    }
+    .parallax .title {
+        color: $red;
+        font-size: 65px;
+    }
+    .parallax .front-page-footer {
+        background-color: $red;
     }
 }

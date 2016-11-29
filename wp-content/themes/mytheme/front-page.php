@@ -15,7 +15,9 @@
     <div class="parallax">
         <div id="group1" class="parallax__group">
             <div class="parallax__layer parallax__layer--base" >
-                <div class="title"><?php echo($text); ?></div>
+                <div class="title-box">
+                    <div class="title"><?php echo($text); ?></div>
+                </div>
             </div>
             <div class="parallax__layer parallax__layer--back" style="
             background-image: url(<?php echo wp_get_attachment_url($image); ?>);

@@ -1,7 +1,93 @@
 /* BOOTSTRAP FIXES */
 
+.navbar .navbar-inner {
+    background-color: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-inner li a {
+    color: $black;
+}
+
+.navbar .navbar-inner li a:hover {
+    color: $turquoise;
+    text-shadow: none;
+}
+
+.navbar-inverse .brand {
+    color: $black;
+    font-family: $font;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.navbar-inverse .brand:hover {
+    color: $turquoise;
+    text-shadow: none;
+}
+
 .navbar .nav > li > a {
-    padding: 15px;
+    font-family: $font;
+    font-size: 25px;
+    padding: 30px;
+}
+
+@media all and (max-width: $breakpoint-bootstrap) {
+    .navbar-inverse .brand:hover,
+    .navbar-inverse .nav > li > a:hover,
+    .navbar-inverse .brand:focus,
+    .navbar-inverse .nav > li > a:focus {
+        color: $red;
+    }
+    .navbar-inverse .nav-collapse .nav > li > a {
+        color: $black;
+        padding-left: 15px;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        font-size: 17px;
+    }
+    .navbar-inverse .nav .active > a,
+    .navbar-inverse .nav .active > a:hover,
+    .navbar-inverse .nav .active > a:focus,
+    .navbar-inverse .nav .current_page_item a,
+    .navbar-inverse .nav .current_page_item a:hover,
+    .navbar-inverse .nav .current_page_item a:focus,
+    .navbar-inverse .nav .current_page_parent a,
+    .navbar-inverse .nav .current_page_parent a:hover,
+    .navbar-inverse .nav .current_page_parent a:focus {
+        color: $white !important;
+        padding: 15px;
+    }
+    .navbar-inverse .nav-collapse .nav > li > a:hover {
+        color: $red;
+    }
+    .btn .btn-navbar .collapsed .navbar .navbar-inner {
+        position: relative;
+        top: 50%;
+        transform: translateY(20%);
+    }
+    .navbar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .navbar-inverse .brand {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+@media all and (max-width: $breakpoint-tablet) {
+    .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .navbar-inverse .brand {
+        color: $black;
+        font-family: $font;
+        font-size: 22px;
+        font-weight: 600;
+    }
 }
 
 
