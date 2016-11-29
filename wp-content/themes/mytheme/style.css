@@ -169,6 +169,9 @@ body {
   width: 75%;
   opacity: 1; }
 
+.title-box-scroll {
+  color: white; }
+
 @media (max-width: 979px) {
   .parallax::-webkit-scrollbar-thumb {
     background-color: #EC7C96; } }

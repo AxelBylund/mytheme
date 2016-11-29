@@ -9,4 +9,8 @@ $(document).ready(function () {
         }
         wp.media.editor.open('#select_image_button');
     });
+    $title = $('#first-title');
+    $(document).scroll(function() {
+        $title.toggleClass('.title-box-scroll')
+    })
 });
