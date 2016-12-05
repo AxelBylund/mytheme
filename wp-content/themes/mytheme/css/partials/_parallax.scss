@@ -118,12 +118,15 @@
 }
 
 .scroll-color {
-    color: white;
+    color: #fff !important;
 }
 
 @media (max-width: $breakpoint-bootstrap) {
     .parallax::-webkit-scrollbar-thumb {
         background-color: $red;
+    }
+    .scroll-color {
+        color: #EC7C96 !important;
     }
 }
 

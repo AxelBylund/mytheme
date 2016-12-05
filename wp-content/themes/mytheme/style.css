@@ -170,11 +170,14 @@ body {
   opacity: 1; }
 
 .scroll-color {
-  color: white; }
+  color: #fff !important; }
 
 @media (max-width: 979px) {
   .parallax::-webkit-scrollbar-thumb {
-    background-color: #EC7C96; } }
+    background-color: #EC7C96; }
+
+  .scroll-color {
+    color: #EC7C96 !important; } }
 /* END OF PARALLAX */
 /* FONTS */
 /* END OF FONTS */
