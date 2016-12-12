@@ -1,0 +1,19 @@
+Resurser:
+
+https://codepen.io/nikhil8krishnan/pen/gaybLK
+https://premium.wpmudev.org/blog/setting-up-xampp/
+https://www.reddit.com/r/webdev/
+https://www.reddit.com/r/web_design/
+https://www.reddit.com/r/javascript/
+http://codeconvey.com/easy-way-to-build-jquery-parallax-effect/
+http://keithclark.co.uk/articles/pure-css-parallax-websites/demo3/ Använde denna tillslut.
+PHP-utvecklare på jobbet
+
+Ville leka lite under vissa idle timmar på jobbet och hade inte direkt något projekt hemma. Det är någonting med databasen hemma hos mig som gör att den inte ville fungera efter ett tag men gjorde det mesta på detta temat på jobbet när jag var Idle. Kommer såklart fortsätta göra detta tema tills jag känner mig helt nöjd. CSSen körde jag SASS & Bootstraps färdiga.
+
+Det jag satt mest och under längst tid med var nog PHP backend för att fixa bildkopplingen på startsidan. Parallaxen gav mig också mycket problem men det var mest HTML & CSS fel. Känner att jag har större förståelese för PHP efter detta lilla projekt och det är alltid kul att kunna leka med CSSen.
+
+
+Plugins:
+"Front Page Template" by Axel Bylund (Metabox koppling till bilderna och texten)
+"Portfolio" By Huge IT (Portfolioboxar tills jag lyckats lösa buggarna min egna kod har med dom)

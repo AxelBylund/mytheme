@@ -2,6 +2,13 @@
 
 function wpbootstrap_scripts_with_jquery()
 {
+    // comment out the next two lines to load the local copy of jQuery
+    wp_deregister_script('bootstrap');
+    wp_register_script('boostrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet', false, '3.3.5');
+    wp_enqueue_script('bootsrap');
+
+    add_action('init', 'replace_jquery');
+    
 	// Register the script like this for a theme:
 	wp_register_script( 'custom-script', get_template_directory_uri() . '/bootstrap/js/bootstrap.js', array( 'jquery' ) );
     
