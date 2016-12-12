@@ -1,7 +1,5 @@
 <?php
 
-require_once('portfolio-type.php');
-
 function wpbootstrap_scripts_with_jquery()
 {
 	// Register the script like this for a theme:
@@ -29,6 +27,15 @@ if ( function_exists('register_sidebar') )
 		'before_title' => '<h3>',
 		'after_title' => '</h3>',
 	));
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'main-menu' => __( 'Main Menu' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
 
 function saveBackgroundImage($post) {
     $bg = isset($_POST['background']) ? $_POST['background']: null;

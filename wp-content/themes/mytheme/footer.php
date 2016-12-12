@@ -1,7 +1,7 @@
 <hr>
 
       <footer>
-        <p>© Company 2012</p>
+        <p><?php bloginfo('name'); ?></p>
       </footer>
 <?php if(!is_front_page()):?>
     </div> <!-- /container -->

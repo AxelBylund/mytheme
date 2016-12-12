@@ -19,3 +19,19 @@
         background-color: $red;
     }
 }
+
+.menu-item {
+    font-family: $font;
+    font-size: 25px;
+    padding: 30px;
+    float: left;
+    list-style: none;
+    a {
+        text-decoration: none;
+    }
+}
+
+.current_page_item {
+    color: $white;
+    background-color: $black;
+}

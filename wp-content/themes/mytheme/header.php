@@ -26,7 +26,8 @@
                 </a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <?php wp_list_pages(array('title_li' => '', 'exclude' => 4)); ?>
+                        <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+                        <!--?php wp_list_pages(array('title_li' => '', 'exclude' => 4)); ?>-->
                     </ul>
                 </div>
                 <!--/.nav-collapse -->

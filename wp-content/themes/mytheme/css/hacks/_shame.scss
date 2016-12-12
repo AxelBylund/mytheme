@@ -8,6 +8,7 @@
 
 .navbar .navbar-inner li a {
     color: $black;
+    background-color: transparent !important;
 }
 
 .navbar .navbar-inner li a:hover {

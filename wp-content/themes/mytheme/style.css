@@ -30,6 +30,9 @@ html {
 body {
   font: 100% / 1.5 Arial; }
 
+.container .row {
+  margin-top: 100px; }
+
 /* END OF GLOBAL */
 /* FRONT-PAGE FOOTER */
 .front-page-footer {
@@ -70,6 +73,19 @@ body {
 
   .parallax .front-page-footer {
     background-color: #EC7C96; } }
+.menu-item {
+  font-family: "Bungee";
+  font-size: 25px;
+  padding: 30px;
+  float: left;
+  list-style: none; }
+  .menu-item a {
+    text-decoration: none; }
+
+.current_page_item {
+  color: #ffffff;
+  background-color: #000000; }
+
 /* PARALLAX 
 
 -moz-
@@ -218,7 +234,8 @@ body {
   border-color: rgba(0, 0, 0, 0.1); }
 
 .navbar .navbar-inner li a {
-  color: #000000; }
+  color: #000000;
+  background-color: transparent !important; }
 
 .navbar .navbar-inner li a:hover {
   color: #57F9F3;
