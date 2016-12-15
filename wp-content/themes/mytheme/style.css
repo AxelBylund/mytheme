@@ -302,7 +302,7 @@ footer .right {
 
 .title {
   text-align: center;
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   color: #57F9F3;

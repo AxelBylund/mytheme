@@ -15,7 +15,7 @@
     <div class="parallax">
         <div id="group1" class="parallax__group">
             <div class="parallax__layer parallax__layer--base" >
-                <div class="title-box">
+                <div class="title-box" id="pajas">
                     <div id="first-title" class="title"><?php echo($text); ?></div>
                 </div>
             </div>

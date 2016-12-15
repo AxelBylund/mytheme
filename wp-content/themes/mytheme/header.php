@@ -20,6 +20,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
+                <a href="#first-title">asds</a>
                 <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
                 <a class="brand" href="<?php echo site_url(); ?>">
                     <?php bloginfo('name'); ?>
