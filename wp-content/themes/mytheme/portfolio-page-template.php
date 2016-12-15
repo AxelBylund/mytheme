@@ -13,4 +13,5 @@ get_header(); ?>
             <?php get_sidebar(); ?>
         </div>
     </div>
+</div> <!-- container -->
     <?php get_footer(); ?>

@@ -3,13 +3,14 @@
 body,
 html {
     max-width: 1920px;
-    min-width: 330px;
+    min-width: 350px;
     margin: 0;
     padding: 0;
 }
 
 body {
     font: 100% / 1.5 Arial;
+    width: auto;
 }
 
 .container .row {

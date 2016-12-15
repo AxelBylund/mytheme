@@ -4,7 +4,7 @@ $(document).ready(function () {
         wp.media.editor.send.attachment = function (attachment, data) {
             $('#background-image').val(data.id);
             $('#background-image-thumbnail').attr('src', data.sizes.thumbnail.url);
-        }
+        };
         wp.media.editor.open('#select_image_button');
     });
     $(function () {
@@ -42,12 +42,13 @@ $(document).ready(function () {
         }, 300);
     })
     $('.contact-form').find('.form-control').blur(function () {
-        if ($(this).val().length == 0) {
+        if ($(this).val().length === 0) {
             $(this).parent('.input-block').removeClass('focus');
             $(this).parent().find('label').animate({
                 'top': '25px'
                 , 'fontSize': '18px'
             }, 300);
         }
-    })
+    });
+    console.log('end of main.js loaded');
 });

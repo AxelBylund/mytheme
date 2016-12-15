@@ -1,25 +1,31 @@
 /* FRONT-PAGE FOOTER */
 
-.front-page-footer {
-    height: 60vh;
+footer {
+    height: 15vh;
     width: 100%;
     background-color: $turquoise;
     z-index: 10;
     text-align: center;
-    margin-top: -1px;
+    margin-top: 0;
 }
 
-.front-page-footer .left {
+footer .left {
     float: left;
     width: 50%;
     height: 100%;
 }
 
-.front-page-footer .right {
+footer .right {
     float: right;
     width: 50%;
     height: 100%;
 }
 
+
+@media (max-width: $breakpoint-bootstrap) { 
+    footer {
+        background-color: $pink;
+    }
+}
 
 /* END OF FRONT-PAGE FOOTER */

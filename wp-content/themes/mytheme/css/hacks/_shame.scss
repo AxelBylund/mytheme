@@ -41,7 +41,7 @@
     .navbar-inverse .nav > li > a:hover,
     .navbar-inverse .brand:focus,
     .navbar-inverse .nav > li > a:focus {
-        color: $red;
+        color: $pink;
     }
     .navbar-inverse .nav-collapse .nav > li > a {
         color: $black;
@@ -63,7 +63,7 @@
         padding: 15px;
     }
     .navbar-inverse .nav-collapse .nav > li > a:hover {
-        color: $red;
+        color: $pink;
     }
     .btn .btn-navbar .collapsed .navbar .navbar-inner {
         position: relative;
@@ -74,9 +74,21 @@
         padding-left: 0;
         padding-right: 0;
     }
+    .navbar .btn-navbar {
+        padding: 9px 10px;
+    }
+    .navbar .btn-navbar .icon-bar {
+        box-shadow: none;
+    }
     .navbar-inverse .brand {
         font-size: 30px;
         font-weight: 600;
+        box-shadow: none;
+        text-shadow: none;
+    }
+    .navbar .navbar-inner li a:hover {
+        color: $pink !important;
+        text-shadow: none;
     }
 }
 

@@ -1,12 +1,13 @@
-<hr>
-
-      <footer>
-        <p><?php bloginfo('name'); ?></p>
-      </footer>
+<footer>
+    <p>
+        <?php bloginfo('name'); ?>
+    </p>
+</footer>
 <?php if(!is_front_page()):?>
-    </div> <!-- /container -->
-<?php endif;?>
-    <?php wp_footer(); ?>
+    </div>
+    <!-- /container -->
+    <?php endif;?>
+        <?php wp_footer(); ?>
+            </body>
 
-  </body>
-</html>
+            </html>

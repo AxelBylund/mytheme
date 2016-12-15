@@ -29,10 +29,5 @@
             </div>
             <div class="parallax__layer parallax__layer--base" style="background-image: url(<?php echo wp_get_attachment_url($secondimage); ?>); background-position: <?php echo ($secondselected); ?>"> </div>
         </div>
-        <div class="front-page-footer">
-            <div class="left">
-                <h1>Left</h1> </div>
-            <div class="right">
-                <h1>Right</h1> </div>
-        </div>
+        <?php get_footer(); ?>
     </div>

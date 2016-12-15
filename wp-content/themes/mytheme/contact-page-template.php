@@ -83,39 +83,6 @@ get_header();?>
     <div class="row">
         <div class="span8">
             <h1>Contact me, please..</h1>
-            <!--
-            <div id="respond">
-                <?php echo $response; ?>
-                    <form action="php the_permalink(); ?>" method="post">
-                        <p>
-                            <label for="message_name">Name: <span>*</span>
-                                <br>
-                                <input type="text" id="message_name" name="message_name" value="php echo esc_attr($_POST['message_name']); ?>"> </label>
-                        </p>
-                        <p>
-                            <label for="message_email">Email: <span>*</span>
-                                <br>
-                                <input type="text" name="message_email" id="message_email" value="php echo esc_attr($_POST['message_email']); ?>"> </label>
-                        </p>
-                        <p>
-                            <label for="message_text">Message: <span>*</span>
-                                <br>
-                                <textarea type="text" name="message_text" id="message_text">
-                                    php echo esc_textarea($_POST['message_text']); ?>
-                                </textarea>
-                            </label>
-                        </p>
-                        <p>
-                            <label for="message_human">Human Verification: <span>*</span>
-                                <br>
-                                <input type="text" style="width: 60px;" name="message_human" id="message_human"> + 3 = 5</label>
-                        </p>
-                        <input type="hidden" name="submitted" value="1">
-                        <p>
-                            <input type="submit"> </p>
-                    </form>
-            </div>
-            -->
             <section class="contact-wrap">
                 <?php echo $response; ?>
                     <form action="<?php the_permalink(); ?>" method="post" class="contact-form">
@@ -149,4 +116,5 @@ get_header();?>
             </section>
         </div>
     </div>
+<!-- container -->
     <?php get_footer(); ?>
